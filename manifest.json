@@ -1,0 +1,22 @@
+{
+  "name": "Folha Ilimitado",
+  "description": "Burla o sistema de restrição que
+     o site www.folha.uol.com.br usa para limitar o número de acesso mensais à seus artigos.",
+  "homepage_url": "https://github.com/raphaelivan/folha-ilimitado",
+  "version": "1.0",
+
+  "manifest_version": 2,
+
+  "icons": {
+    "16": "icons/icon_16.png",
+    "128": "icons/icon_128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://www1.folha.uol.com.br/*"],
+      "js": ["src/inject.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
